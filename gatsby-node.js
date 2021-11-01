@@ -7,3 +7,19 @@ exports.createPages = async ({ actions }) => {
     defer: true,
   })
 }
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        "url": require.resolve("url/")
+      }
+    }
+  })
+}

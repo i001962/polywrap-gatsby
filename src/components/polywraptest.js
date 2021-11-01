@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWeb3ApiQuery } from '@web3api/react';
 
-export const PolywrapTest = () => {
+const PolywrapTest = () => {
   const [message, setMessage] = React.useState('');
 
   const query = {
@@ -72,3 +72,5 @@ export const PolywrapTest = () => {
     </>
   );
 };
+
+export default PolywrapTest;
